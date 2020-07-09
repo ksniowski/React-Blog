@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Home from './pages/Home';
-import Header from './modules/Header';
+import PageRouter from './modules/PageRouter';
 
 import './index.scss';
 
 ReactDOM.render(
   <>
-    <Header />
-    <div className='container'>
-      <Home />
-    </div>
+    <PageRouter />
   </>,
   document.getElementById('root')
 );
