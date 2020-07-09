@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from '../modules/Header';
+import Header from './Header/Header';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import Dashboard from '../pages/Dashboard';
 
 const PageRouter = () => {
   return (
@@ -16,6 +17,9 @@ const PageRouter = () => {
             </Route>
             <Route path='/login'>
               <Login />
+            </Route>
+            <Route path='/dashboard'>
+              <Dashboard />
             </Route>
           </Switch>
         </div>

@@ -1,0 +1,13 @@
+#root header {
+  justify-content: right;
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid;
+
+  a {
+    margin: 0 10px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
