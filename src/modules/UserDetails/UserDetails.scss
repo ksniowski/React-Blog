@@ -1,0 +1,27 @@
+.user-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__avatar {
+    img {
+      max-height: 250px;
+    }
+  }
+
+  &__details {
+    p {
+      margin-bottom: 5px;
+      display: block;
+    }
+  }
+
+  &__blog {
+    text-align: center;
+
+    span {
+      font-size: 3.5em;
+      font-weight: 600;
+    }
+  }
+}

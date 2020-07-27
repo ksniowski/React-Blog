@@ -3,27 +3,37 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
+import UserProvider from '../contexts/UserContext';
+import Dashboard from '../pages/Dashboard/Dashboard';
+import Logout from '../modules/Logout';
 
 const PageRouter = () => {
   return (
     <>
-      <Router>
-        <Header />
-        <div className='container'>
-          <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='/login'>
-              <Login />
-            </Route>
-            <Route path='/dashboard'>
-              <Dashboard />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+      <UserProvider>
+        <Router>
+          <Header />
+          <div className='container'>
+            <Switch>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+
+              <Route exact path='/login'>
+                <Login />
+              </Route>
+
+              <Route exact path='/logout'>
+                <Logout />
+              </Route>
+
+              <Route path='/dashboard'>
+                <Dashboard />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </UserProvider>
     </>
   );
 };

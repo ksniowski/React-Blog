@@ -473,13 +473,22 @@ textarea {
  * Rest of App styles
 */
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 b {
   font-weight: bold;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin-bottom: 12px;
 }
 
 .container {

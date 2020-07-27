@@ -1,12 +1,10 @@
 import React from 'react';
 
-import './Settings.scss';
-
 const Settings = () => {
   return (
-    <div>
+    <section className='settings'>
       Hello, I'm <b>Settings</b> component
-    </div>
+    </section>
   );
 };
 

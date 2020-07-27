@@ -1,9 +1,13 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 
 export const FormContext = React.createContext();
 
-export const Form = ({ children, onSubmit }) => {
-  const [formValues, setFormValues] = useState({});
+export const Form = ({ children, onSubmit, defaultValues }) => {
+  const [formValues, setFormValues] = useState(defaultValues);
+
+  useEffect(() => {
+    setFormValues(defaultValues);
+  }, [defaultValues]);
 
   const setInputValue = useCallback((name, value) => {
     if (name === '' || name === undefined) {
